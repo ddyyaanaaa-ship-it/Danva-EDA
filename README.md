@@ -1,17 +1,47 @@
-## Anggota Kelompok:
-- Diyanatul Fauziyah
-- Asy syifa Ainaya Zahra
-- Nasya Awaliyah
-- Raveska Hinayah
+# DANVA — Exploratory Data Analysis
 
-## Jawaban Bagian F:
-1. Baris : 1212, Kolom : 11, Satu Baris merepresentasikan satu transaksi penjualan
-2. - **Numerik** : jumlah, harga_satuan, diskon_persen, rating_pelanggan, total_bayar
-   - **Kategorikal** : kota, kategori, produk, metode_bayar
-   - **Tanggal** : tanggal
-3. Kolom Bermasalah
-   - **'metode_bayar'** : terdapat 25 data kosong (missing values)
-   - **'rating_pelanggan'** : terdapat 61 data kosong (missing values)
-   - **12 baris terduplikasi** (baris yang isinya sama persis perlu di hapus salah satunya)
-   - **'kota'** : nilai tidak konsisten akibat perbedaan kapitalisasi (contoh: "Depok" dan "DEPOK", terhitung beda, padahal kota yang sama)
-4. Sudah Cukup
+## Topik proyek
+**Analisis Pola Penjualan Supermarket Berdasarkan Produk, Kota, Pelanggan, dan Metode Pembayaran**
+
+## Anggota kelompok
+1. Diyanatul Fauziyah
+2. Nasya Awaliyah
+3. Raveska Hinayah
+4. Asysyifa Ainaya Zahra
+
+## Deskripsi singkat
+Proyek ini menganalisis data transaksi supermarket untuk memahami pola nilai transaksi, kelompok produk, kota/cabang, tipe pelanggan, dan metode pembayaran.
+
+## Struktur repository
+```text
+Danva-EDA/
+├── data/
+│   ├── raw/          # Dataset asli; jangan diubah
+│   ├── simulated/    # Salinan dengan kontaminasi terkontrol untuk latihan M2
+│   └── processed/    # Dataset hasil pembersihan
+├── notebooks/        # Notebook resmi starter kit dan notebook praktikum anggota
+├── reports/
+│   └── figures/      # Grafik hasil analisis
+├── knime/            # File workflow KNIME untuk milestone berikutnya
+├── README.md
+├── data_dictionary.md
+├── cleaning_log.md
+├── AI_usage_log.md
+├── PENGOTORAN_DATASET.md
+└── requirements.txt
+```
+
+## Urutan pengerjaan
+- **M1:** rumusan masalah/pertanyaan analisis, sumber dan asal data, data dictionary, serta pemeriksaan privasi.
+- **M2:** diagnosis kualitas data, pembersihan data, validasi, dan cleaning log.
+- **M3:** analisis univariat, bivariat, dan multivariat.
+- **M4–M5:** dikerjakan setelah materi dan instruksi dosen untuk milestone tersebut diberikan.
+
+## Catatan dataset
+- `data/raw/supermarket_sales_original.csv` adalah salinan data asli yang diterima kelompok. Jangan mengubah atau menimpanya.
+- `data/simulated/supermarket_sales_dirty.csv` adalah salinan yang diberi kesalahan secara terkontrol untuk latihan M2.
+- Hasil pembersihan nantinya disimpan di `data/processed/`.
+- Kelompok perlu memastikan kembali tautan sumber asli dan lisensi dataset dari tempat file pertama kali diunduh sebelum laporan akhir.
+
+## Cara menjalankan
+Buka notebook dari folder `notebooks/` menggunakan Jupyter atau Google Colab. Sesuaikan path relatif bila menjalankan dari lingkungan yang berbeda. Jalankan notebook sesuai instruksi milestone dan pastikan hasil akhir disimpan pada folder repository, bukan di lokasi sementara.
